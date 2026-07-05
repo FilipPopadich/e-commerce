@@ -1,0 +1,37 @@
+.confirmation {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.confirmation h2 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--black);
+}
+
+.confirmation p {
+    font-size: 0.875rem;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.conf-address {
+    color: var(--muted) !important;
+    font-size: 0.8rem !important;
+}
+
+.conf-items {
+    color: var(--muted) !important;
+    font-size: 0.8rem !important;
+}
+
+.confirmation .btn-primary {
+    margin-top: 1rem;
+}
