@@ -1,0 +1,304 @@
+.filter-bar {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1.75rem;
+}
+
+.filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: none;
+    border: none;
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0;
+    cursor: pointer;
+    transition: color var(--transition);
+}
+
+.filter-toggle:hover,
+.filter-toggle.open {
+    color: var(--muted);
+}
+
+.filter-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 2px;
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.filter-panel {
+    position: fixed;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    width: min(420px, calc(100vw - 40px));
+    overflow-y: auto;
+    background: var(--white);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+    z-index: 200;
+    border-radius: 3px;
+    scrollbar-width: none;
+}
+
+.filter-panel::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--off);
+}
+
+.filter-panel-header h4 {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.filter-panel-close {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 0;
+    transition: color var(--transition);
+    margin-bottom: 0.5rem;
+}
+
+.filter-panel-close:hover {
+    color: var(--black);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.filter-heading {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.checkbox-option input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    border: 1px solid var(--light);
+    background: var(--white);
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: border-color var(--transition), background var(--transition);
+}
+
+.checkbox-option input[type="checkbox"]:hover {
+    border-color: var(--dark);
+}
+
+.checkbox-option input[type="checkbox"]:checked {
+    background: var(--black);
+    border-color: var(--black);
+}
+
+.checkbox-option input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.sort-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sort-option {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.sort-option input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    border: 1px solid var(--light);
+    background: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: border-color var(--transition);
+}
+
+.sort-option input[type="radio"]:hover {
+    border-color: var(--dark);
+}
+
+.sort-option input[type="radio"]:checked {
+    border-color: var(--black);
+}
+
+.sort-option input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--black);
+}
+
+.colour-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.colour-swatch-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    padding: 3px;
+    cursor: pointer;
+    line-height: 0;
+    transition: border-color var(--transition);
+}
+
+.colour-swatch-wrap:hover {
+    border-color: var(--light);
+}
+
+.colour-swatch-wrap.selected {
+    border-color: var(--black);
+}
+
+.colour-swatch {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.price-range {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: var(--light);
+    outline: none;
+    padding: 0;
+    border: none !important;
+}
+
+.price-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    background: var(--black);
+    cursor: pointer;
+}
+
+.price-range::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    background: var(--black);
+    cursor: pointer;
+    border: none;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: var(--light);
+    width: 100%;
+}
+
+.clear-facets {
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--muted);
+    cursor: pointer;
+    align-self: flex-start;
+    padding: 0;
+    transition: color var(--transition);
+}
+
+.clear-facets:hover {
+    color: var(--black);
+}

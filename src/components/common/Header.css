@@ -1,0 +1,190 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgb(255 255 255 / 0.95);
+    border-bottom: 2px solid transparent;
+    transition: background-color var(--transition), border-color var(--transition);
+}
+
+.header--home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+}
+
+.header--home.header--scrolled {
+    background-color: rgba(255 255 255 / 0.95);
+    backdrop-filter: blur(3px);
+}
+
+.header-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: var(--black);
+    text-transform: uppercase;
+    transition: color var(--transition);
+}
+
+.header-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--black);
+    cursor: pointer;
+    transition: color var(--transition);
+    position: relative;
+}
+
+.header--home:not(.header--scrolled) .logo,
+.header--home:not(.header--scrolled) .nav-link,
+.header--home:not(.header--scrolled) .bag-icon {
+    color: var(--white);
+}
+
+.header--home:not(.header--scrolled) .cart-count {
+    background: var(--white);
+    color: var(--black);
+}
+
+.shop-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.shop-link:hover {
+    color: var(--light);
+}
+
+.header--home:not(.header--scrolled) .shop-link:hover {
+    color: var(--light);
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.bag-icon {
+    flex-shrink: 0;
+    color: var(--black);
+    transition: color var(--transition);
+}
+
+.cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 2px;
+    font-size: 0.65rem;
+    font-weight: 500;
+    transition: background var(--transition), color var(--transition);
+}
+
+.shop-menu {
+    display: flex;
+    align-items: center;
+}
+
+.shop-chevron {
+    transition: transform var(--transition);
+}
+
+.shop-link.open .shop-chevron {
+    transform: rotate(180deg);
+}
+
+.shop-dropdown {
+    padding: 10px 0;
+    position: fixed;
+    top: 117px;
+    left: 0;
+    width: 100%;
+    background: rgb(255 255 255 / 0.95);
+    backdrop-filter: blur(3px);
+    border-top: 1px solid var(--mid);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+    z-index: 150;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition), visibility var(--transition);
+}
+
+.shop-dropdown.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.shop-dropdown-inner {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+    padding: 2.5rem 2rem;
+}
+
+.shop-dropdown-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-width: 140px;
+}
+
+.shop-dropdown-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 0.35rem;
+}
+
+.shop-dropdown-col a {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--muted);
+    transition: 0.25s ease;
+}
+
+.shop-dropdown-col a:hover {
+    color: var(--transition);
+}

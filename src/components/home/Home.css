@@ -1,0 +1,238 @@
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    position: relative;
+    min-height: calc(117vh + 108px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--dark);
+    margin-top: -108px;
+    padding-top: 108px;
+}
+
+.hero-media {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1555529771-835f59fc5efe');
+    background-size: cover;
+    background-position: center bottom;
+    filter: brightness(0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    max-width: 760px;
+}
+
+.hero-eyebrow {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--off);
+    margin-bottom: 1.25rem;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.75rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+    margin-bottom: 1.4rem;
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--off);
+    margin-bottom: 2.5rem;
+    max-width: 620px;
+}
+
+.hero-cta {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+
+.hero-cta:hover {
+    background: transparent;
+    color: var(--white);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 2rem 0;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--black);
+    margin-bottom: 0 !important;
+}
+
+.see-all {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color var(--transition);
+}
+
+.see-all:hover {
+    color: var(--black);
+}
+
+.collections {
+    padding-top: 5rem;
+}
+
+.collection-card {
+    position: relative;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.collection-image-wrap {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--off);
+    border: 1px solid var(--off);
+}
+
+.collection-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.collection-card:hover .collection-image-wrap img {
+    transform: scale(1.04);
+}
+
+.collection-name {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.popular {
+    padding-top: 5rem;
+}
+
+.promo-band {
+    margin-top: 5rem;
+    padding: 3.5rem 0;
+    background: var(--off);
+    text-align: center;
+    border-top: 2px solid var(--dark);
+    border-bottom: 2px solid var(--dark);
+}
+
+.promo-inner h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.promo-inner p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.subscribe {
+    padding: 5rem 0 6rem;
+    background: var(--black);
+    text-align: center;
+}
+
+.subscribe-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.subscribe-sub {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.subscribe-input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    outline: none;
+    border-radius: 0;
+    transition: border-color var(--transition);
+}
+
+.subscribe-input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.subscribe-input:focus {
+    border-color: var(--white);
+}
+
+.subscribe-btn {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+    white-space: nowrap;
+}
+
+.subscribe-btn:hover {
+    background: transparent;
+    color: var(--white);
+}
+
+@media (max-width: 480px) {
+    .subscribe-form {
+        flex-direction: column;
+    }
+}
