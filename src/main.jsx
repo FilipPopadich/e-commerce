@@ -11,7 +11,7 @@ AOS.init()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/e-commerce">
             <App />
         </BrowserRouter>
     </React.StrictMode>,
