@@ -10,7 +10,7 @@
     text-transform: uppercase;
     letter-spacing: 0.02em;
     color: var(--black);
-    margin-bottom: 2.5rem;
+    margin: 2.5rem auto;
 }
 
 .cart-empty {
@@ -28,6 +28,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 @media (min-width: 900px) {
@@ -42,7 +43,6 @@
     flex-direction: column;
 }
 
-/* Sidebar */
 .cart-sidebar {
     border: 2px solid var(--dark);
     padding: 1.5rem;
@@ -92,4 +92,10 @@
     padding: 0.75rem;
     font-size: 0.7rem;
     letter-spacing: 0.1em;
+}
+
+@media (max-width: 480px) {
+    .cart-empty {
+        margin: 3rem 0 !important;
+    }
 }

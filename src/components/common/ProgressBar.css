@@ -40,7 +40,7 @@
 }
 
 .step-indicator:not(:disabled):hover {
-    border-color: var(--dark);
+    border-color: var(--muted);
 }
 
 .step-indicator:disabled {
@@ -69,7 +69,6 @@
     white-space: nowrap;
 }
 
-.step.active .step-label,
-.step.done .step-label {
-    color: var(--mid);
+.step.active .step-label {
+    color: var(--dark);
 }

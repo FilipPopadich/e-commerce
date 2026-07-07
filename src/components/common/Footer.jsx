@@ -25,7 +25,6 @@ function Footer() {
                 <div className="footer-col">
                     <h4 className="footer-heading">Help</h4>
                     <Link to="/survey">Contact Us</Link>
-                    <Link to="/survey">FAQ</Link>
                 </div>
 
                 <div className="footer-col footer-visit">

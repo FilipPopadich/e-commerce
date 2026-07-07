@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Survey.css';
 
 function Survey() {
@@ -12,6 +13,7 @@ function Survey() {
                 <div className="thanks-icon">✓</div>
                 <h2>Thank you!</h2>
                 <p>We read every response — your voice genuinely shapes what we make next.</p>
+                <Link to="/" className="btn-primary">Return to Home</Link>
             </div>
         );
     }
@@ -19,7 +21,7 @@ function Survey() {
     return (
         <div className="survey-page container">
             <h1 className="survey-title">Tell us what you think</h1>
-            <p className="survey-intro">You've got great taste — help us make FORM even better. It only takes a minute.</p>
+            <p className="survey-intro">You've got great taste! — help us make FORM even better. It only takes a minute.</p>
 
             <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="survey-form">
                 <div className="form-group">
@@ -34,7 +36,7 @@ function Survey() {
                 </div>
                 <div className="form-group">
                     <label>Anything on your mind?</label>
-                    <textarea value={comment} onChange={e => setComment(e.target.value)} rows="5" placeholder="Tell us what you loved, or what we could do better..." />
+                    <textarea value={comment} onChange={e => setComment(e.target.value)} rows="5" placeholder="Tell us what you loved, or what we could do better." />
                 </div>
                 <button type="submit" className="btn-primary">Send Feedback</button>
             </form>

@@ -109,7 +109,7 @@ export const products = [
         brand: 'FORM',
         category: 'tops',
         price: 80.00,
-        description: '--',
+        description: 'Relaxed hooded pullover in brushed cotton fleece, with an adjustable drawstring hood and a soft, brushed interior for everyday warmth.',
         image: img(PHOTOS[8]),
         images: imgs(8, 7, 9),
         colours: [
@@ -170,7 +170,7 @@ export const products = [
         brand: 'FORM',
         category: 'bags',
         price: 65.00,
-        description: 'Heavyweight cotton canvas tote with leather straps. Interior slip pocket.',
+        description: 'Heavyweight cotton canvas tote with reinforced canvas straps. Interior slip pocket.',
         image: img(PHOTOS[14]),
         images: imgs(14, 30, 31),
         colours: [
@@ -178,7 +178,7 @@ export const products = [
             { name: 'Black', hex: '#1a1a1a' },
         ],
         sizes: ['One Size'],
-        material: 'Cotton Canvas, Leather Trim',
+        material: '100% Cotton Canvas',
         materialWeight: '420 gsm',
         fit: 'One Size · Unisex',
         fabricatedIn: 'Canada',
@@ -271,7 +271,7 @@ export const products = [
         brand: 'FORM',
         category: 'outerwear',
         price: 180.00,
-        description: 'Built from high quality canvas to brave harsh weather and remain stylish.',
+        description: 'A weatherproof trench coat cut from heavyweight waxed canvas, sporting deep welt pockets built to stand up to harsh conditions without sacrificing a tailored silhouette.',
         image: img(PHOTOS[20]),
         images: imgs(20, 21),
         colours: [
