@@ -315,7 +315,7 @@ export const products = [
             { name: 'Olive', hex: '#5c6b4a' },
         ],
         sizes: ['One Size'],
-        material: 'Cotton Canvas, Leather Trim',
+        material: '100% Cotton Canvas',
         materialWeight: '—',
         fit: 'One Size · Unisex',
         fabricatedIn: 'Canada',
